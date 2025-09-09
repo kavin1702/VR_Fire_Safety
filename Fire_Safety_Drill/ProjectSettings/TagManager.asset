@@ -7,6 +7,7 @@ TagManager:
   - FxTemporaire
   - Fire
   - ExtinguisherParticle
+  - Controller
   layers:
   - Default
   - TransparentFX
