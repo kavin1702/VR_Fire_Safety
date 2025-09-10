@@ -1,25 +1,25 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
 public class HoseLineRendererPoints : MonoBehaviour
 {
-    public Transform[] hosePoints;
-    private UnityEngine.LineRenderer line;
+    [SerializeField] private Transform hoseStart; // FireExtinguisher -> HoseAnchor
+    [SerializeField] private Transform hoseEnd;   // FireExtinguisher -> Nozzle
+
+    private LineRenderer lr;
 
     void Awake()
     {
-        line = GetComponent<UnityEngine.LineRenderer>();
+        lr = GetComponent<LineRenderer>();
+        lr.positionCount = 2;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        if (hosePoints == null || hosePoints.Length == 0) return;
-
-        line.positionCount = hosePoints.Length;
-
-        for (int i = 0; i < hosePoints.Length; i++)
+        if (hoseStart && hoseEnd)
         {
-            line.SetPosition(i, hosePoints[i].position);
+            lr.SetPosition(0, hoseStart.position);
+            lr.SetPosition(1, hoseEnd.position);
         }
     }
 }

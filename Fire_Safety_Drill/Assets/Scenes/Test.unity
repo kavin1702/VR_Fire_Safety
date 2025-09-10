@@ -438,10 +438,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   pinGrab: {fileID: 293919816}
-  jointToBody: {fileID: 293919820}
+  jointToBody: {fileID: 293919823}
   startPoint: {fileID: 293919815}
   removeDistance: 0.12
---- !u!138 &293919820
+--- !u!138 &293919823
 FixedJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,7 +449,7 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293919814}
   serializedVersion: 1
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1715662421}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -538,7 +538,8 @@ PrefabInstance:
       value: 0.518
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5443582232781731097, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5891504729937195879, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
@@ -553,6 +554,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5781528496062167784, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1572075674}
+    - targetCorrespondingSourceObject: {fileID: 1616974720017730497, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 293919819}
+    - targetCorrespondingSourceObject: {fileID: 1616974720017730497, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 293919823}
     - targetCorrespondingSourceObject: {fileID: 1568332415525556122, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1298703632}
@@ -562,12 +569,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1568332415525556122, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1298703630}
-    - targetCorrespondingSourceObject: {fileID: 1616974720017730497, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 293919819}
-    - targetCorrespondingSourceObject: {fileID: 1616974720017730497, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 293919820}
   m_SourcePrefab: {fileID: 100100000, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
 --- !u!1001 &527479454
 PrefabInstance:
@@ -1006,11 +1007,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1568332415525556122, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
   m_PrefabInstance: {fileID: 341054730}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1298703629 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2307063982732072726, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
-  m_PrefabInstance: {fileID: 341054730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1298703630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,14 +1430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4101efdf6414f9498c10cbee2639c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hosePoints:
-  - {fileID: 1574053184}
-  - {fileID: 1298703629}
---- !u!4 &1574053184 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6638034338638805772, guid: acff2277d0ff01549b4b12480f20051a, type: 3}
-  m_PrefabInstance: {fileID: 341054730}
-  m_PrefabAsset: {fileID: 0}
+  hoseStart: {fileID: 0}
+  hoseEnd: {fileID: 0}
 --- !u!1001 &1592231859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1905,7 +1895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1371400947644515593
 GameObject:
   m_ObjectHideFlags: 0
