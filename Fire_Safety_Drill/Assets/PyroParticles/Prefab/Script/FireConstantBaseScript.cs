@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace DigitalRuby.PyroParticles
 {
@@ -26,7 +25,6 @@ namespace DigitalRuby.PyroParticles
             }
 
             TargetVolume = 1.0f;
-
             this.startMultiplier = currentMultiplier = startMultiplier;
             this.stopMultiplier = stopMultiplier;
         }
@@ -74,10 +72,14 @@ namespace DigitalRuby.PyroParticles
         [HideInInspector]
         public LoopingAudioSource LoopingAudioSource;
 
+        [Header("Fire Settings")]
+        public ParticleSystem fireParticles;  // assign fire particle system in Inspector
+        public float shrinkAmount = 0.1f;     // how much to shrink each spray hit
+        public float minSize = 0.2f;          // minimum fire size before extinguishing
+
         protected override void Awake()
         {
             base.Awake();
-
             // constant effect, so set the duration really high and add an infinite looping sound
             LoopingAudioSource = new LoopingAudioSource(this, AudioSource, StartTime, StopTime);
             Duration = 999999999;
@@ -86,22 +88,41 @@ namespace DigitalRuby.PyroParticles
         protected override void Update()
         {
             base.Update();
-
             LoopingAudioSource.Update();
         }
 
         protected override void Start()
         {
             base.Start();
-
             LoopingAudioSource.Play();
         }
 
         public override void Stop()
         {
             LoopingAudioSource.Stop();
-
             base.Stop();
+        }
+
+        /// <summary>
+        /// Detects collision with spray particles and shrinks fire
+        /// </summary>
+        private void OnParticleCollision(GameObject other)
+        {
+            if (other.CompareTag("Spray")) // make sure your spray GameObject has tag "Spray"
+            {
+                if (fireParticles != null)
+                {
+                    Vector3 currentScale = fireParticles.transform.localScale;
+                    float newScale = Mathf.Max(minSize, currentScale.x - shrinkAmount);
+
+                    fireParticles.transform.localScale = new Vector3(newScale, newScale, newScale);
+
+                    if (newScale <= minSize)
+                    {
+                        Stop(); // fire extinguished
+                    }
+                }
+            }
         }
     }
 }

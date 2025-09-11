@@ -6,13 +6,13 @@ public class ExtinguisherSpray : MonoBehaviour
     {
         Debug.Log("Particle hit: " + other.name);
 
-        if (other.CompareTag("Fire"))
+       /* if (other.CompareTag("Fire"))
         {
             FireController fire = other.GetComponent<FireController>();
             if (fire != null)
             {
                 fire.Extinguish(1f);
             }
-        }
+        }*/
     }
 }

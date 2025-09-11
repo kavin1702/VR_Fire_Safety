@@ -8,6 +8,8 @@ TagManager:
   - Fire
   - ExtinguisherParticle
   - Controller
+  - Spray
+  - Extinguisher
   layers:
   - Default
   - TransparentFX
