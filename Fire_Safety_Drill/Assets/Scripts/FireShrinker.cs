@@ -1,31 +1,6 @@
-﻿//using UnityEngine;
-
-//public class FireShrinker : MonoBehaviour
-//{
-//    private ParticleSystem fireParticle;
-//    private bool isShrinking = false;
-
-//    [Header("Fire Shrink Settings")]
-//    public float shrinkDuration = 3f; // time to shrink fully
-//    private float shrinkTimer = 0f;
-
-//    void Start()
-//    {
-//        fireParticle = GetComponent<ParticleSystem>();
-//    }
-
-//    // Called when extinguisher particles collide with fire
-//    void OnParticleCollision(GameObject other)
-//    {
-//        Destroy(transform.gameObject);
-//    }
-
-//    void Update()
-//    {
-
-//    }
-//}
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;   // ✅ needed for UI
+using UnityEngine.SceneManagement;
 
 public class FireShrinker : MonoBehaviour
 {
@@ -35,13 +10,22 @@ public class FireShrinker : MonoBehaviour
     [Header("Fire Shrink Settings")]
     public float shrinkDuration = 3f; // time to shrink fully
     private float shrinkTimer = 0f;
-
     private Vector3 originalScale;
+
+    [Header("Fire Alarm Settings")]
+    public AudioSource fireAlarm;   // assign your fire alarm AudioSource in inspector
+    public Light fireLight;         // assign the fire light in inspector ✅
+
+    [Header("UI Settings")]
+    public GameObject fireStoppedPanel; // assign your UI panel in inspector
 
     void Start()
     {
         fireParticle = GetComponent<ParticleSystem>();
         originalScale = transform.localScale;
+
+        if (fireStoppedPanel != null)
+            fireStoppedPanel.SetActive(false); // hide panel at start
     }
 
     // Called when extinguisher particles collide with fire
@@ -67,8 +51,31 @@ public class FireShrinker : MonoBehaviour
             // When fully shrunk, destroy
             if (t >= 1f)
             {
-                Destroy(gameObject);
+                StopFire();
             }
         }
+    }
+
+    void StopFire()
+    {
+        // 🔊 Stop fire alarm
+        if (fireAlarm != null)
+            fireAlarm.Stop();
+
+        // 💡 Disable fire light
+        if (fireLight != null)
+            fireLight.enabled = false;
+
+        // 🖼️ Show UI panel
+        if (fireStoppedPanel != null)
+            fireStoppedPanel.SetActive(true);
+
+        // 🔥 Destroy fire
+        Destroy(gameObject);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
