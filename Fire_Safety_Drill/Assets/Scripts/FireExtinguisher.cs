@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -8,6 +9,7 @@ public class FireExtinguisher : MonoBehaviour
     [Header("References")]
    public ParticleSystem sprayEffect;
     public XRGrabInteractable grabInteractable;
+    public UnityEvent onSprayStarted;
 
     [Header("State")]
     public bool isPinRemoved = false;
@@ -30,6 +32,12 @@ public class FireExtinguisher : MonoBehaviour
         {
             sprayEffect.Play();
         }
+    }
+
+    void StartSpray()
+    {
+        sprayEffect.Play();
+        onSprayStarted.Invoke();
     }
 
     private void StopSpray(DeactivateEventArgs args)

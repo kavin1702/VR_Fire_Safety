@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;   // ✅ needed for UI
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class FireShrinker : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class FireShrinker : MonoBehaviour
     [Header("UI Settings")]
     public GameObject fireStoppedPanel; // assign your UI panel in inspector
 
+    public UnityEvent onFireOut;
+
     void Start()
     {
         fireParticle = GetComponent<ParticleSystem>();
@@ -36,6 +39,11 @@ public class FireShrinker : MonoBehaviour
             isShrinking = true;
             shrinkTimer = 0f; // reset timer
         }
+    }
+    void Extinguish()
+    {
+        // when fire fully gone
+        onFireOut.Invoke();
     }
 
     void Update()
@@ -74,8 +82,5 @@ public class FireShrinker : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+   
 }

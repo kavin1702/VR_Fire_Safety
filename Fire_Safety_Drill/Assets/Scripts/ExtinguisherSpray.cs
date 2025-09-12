@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExtinguisherSpray : MonoBehaviour
 {
+   
     private void OnParticleCollision(GameObject other)
     {
         Debug.Log("Particle hit: " + other.name);
