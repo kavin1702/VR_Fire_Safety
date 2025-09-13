@@ -11,10 +11,17 @@ public class InstructionUIManager : MonoBehaviour
     public TMP_Text instructionText;
     public float fadeDuration = 0.5f;
     public float displayTime = 3f;
+    public VoiceGuideManager voiceGuideManager;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        voiceGuideManager.NextStep();
+        voiceGuideManager.NextStep();
     }
 
     public void ShowInstruction(string message)
@@ -25,6 +32,7 @@ public class InstructionUIManager : MonoBehaviour
 
     private IEnumerator ShowInstructionRoutine(string message)
     {
+
         instructionText.text = message;
 
         // Fade in

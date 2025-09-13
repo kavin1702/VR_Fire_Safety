@@ -347,7 +347,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494356307}
         m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: CompleteStep
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -483,9 +483,9 @@ Canvas:
   m_GameObject: {fileID: 404618088}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1849830288}
-  m_PlaneDistance: 1
+  m_PlaneDistance: 2
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -626,17 +626,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444713201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 55}
-  m_LocalScale: {x: 0.52052206, y: 0.52052206, z: 0.52052206}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.8342, y: 3.3262734, z: 6.8342}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 529258091}
   m_Father: {fileID: 404618093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 205, y: -124}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 584, y: -322}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &444713203
 CanvasGroup:
@@ -713,16 +713,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452041750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2084953}
+  m_LocalScale: {x: 0.7482321, y: 0.7305915, z: 1.0071204}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1066926796}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 0}
+  m_AnchoredPosition: {x: 11.971714, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452041752
@@ -891,8 +891,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 378d067e071df6f44a89dab7cb2ce579, type: 3}
+  m_Resource: {fileID: 8300000, guid: 378d067e071df6f44a89dab7cb2ce579, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1041,6 +1041,7 @@ MonoBehaviour:
   instructionText: {fileID: 529258092}
   fadeDuration: 0.5
   displayTime: 3
+  voiceGuideManager: {fileID: 494356307}
 --- !u!1 &529258090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,17 +1067,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529258090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.08633051, y: 0.17737567, z: 0.08633051}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 444713202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 2.9264526, y: -1.5031738}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529258092
 MonoBehaviour:
@@ -1163,7 +1164,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -276.68375, y: -190.99107, z: -201.43492, w: -126.00547}
+  m_margin: {x: -332.87766, y: -77.67562, z: -267.18158, w: -67.539055}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1603,12 +1604,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494356307}
         m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: CompleteStep
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1809,12 +1810,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494356307}
         m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: CompleteStep
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1845,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215606690494494711, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: onSprayStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: CompleteStep
       objectReference: {fileID: 0}
     - target: {fileID: 1215606690494494711, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: onSprayStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1853,7 +1854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215606690494494711, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: onSprayStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1215606690494494711, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: onSprayStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1929,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4605144394482047454, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: CompleteStep
       objectReference: {fileID: 0}
     - target: {fileID: 4605144394482047454, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1937,7 +1938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4605144394482047454, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4605144394482047454, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1977,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5529466342207556130, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
+      value: CompleteStep
       objectReference: {fileID: 0}
     - target: {fileID: 5529466342207556130, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1985,7 +1986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5529466342207556130, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5529466342207556130, guid: aa32e1385d0673d478bb97d47eec6534, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2644,12 +2645,12 @@ GameObject:
   - component: {fileID: 1066926795}
   - component: {fileID: 1066926794}
   m_Layer: 5
-  m_Name: Exit panel
+  m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1066926794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,14 +2664,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0.23683882, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 6858abb4516aae344881bf286b3aac33, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2696,8 +2697,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066926793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -376.4}
-  m_LocalScale: {x: 1.6102, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -291.9}
+  m_LocalScale: {x: 2.1520064, y: 1.368754, z: 0.99293}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 452041751}
@@ -2705,7 +2706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 36.3, y: 0}
+  m_AnchoredPosition: {x: 78.1, y: -9.8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1145781018
@@ -3097,7 +3098,7 @@ Transform:
   m_GameObject: {fileID: 1429756777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.0285, y: 0, z: 0.0015}
+  m_LocalPosition: {x: -0.0293, y: 0, z: 0.0015}
   m_LocalScale: {x: -0.032376, y: -0.005953299, z: -0.032376}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3167,12 +3168,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 494356307}
         m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: CompleteStep
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3224,7 +3225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2dab7ec4ccea00541948d8306e99b0fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3398,19 +3399,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 494356307}
-        m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -4022,7 +4011,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 494356307}
+        m_TargetAssemblyTypeName: VoiceGuideManager, Assembly-CSharp
+        m_MethodName: CompleteStep
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
