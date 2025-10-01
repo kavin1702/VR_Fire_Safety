@@ -21,7 +21,6 @@ public class InstructionUIManager : MonoBehaviour
     private void Start()
     {
         voiceGuideManager.NextStep();
-        voiceGuideManager.NextStep();
     }
 
     public void ShowInstruction(string message)

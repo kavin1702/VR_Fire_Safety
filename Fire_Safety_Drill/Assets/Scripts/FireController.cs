@@ -4,8 +4,8 @@ using UnityEngine.Events;
 public class FireController : MonoBehaviour
 {
     [Header("Fire Settings")]
-    public float shrinkRate = 1f;   // speed of shrinking
-    public float minScale = 0.1f;   // when fire is considered "out"
+    public float shrinkRate = 1f;  
+    public float minScale = 0.1f;  
     public UnityEvent onFireOut;
 
     private Vector3 originalScale;
@@ -16,7 +16,7 @@ public class FireController : MonoBehaviour
     }
     void Extinguish()
     {
-        // when fire fully gone
+       
         onFireOut.Invoke();
     }
     public void Extinguish(float amount)

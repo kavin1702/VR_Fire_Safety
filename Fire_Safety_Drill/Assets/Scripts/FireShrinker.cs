@@ -19,6 +19,8 @@ public class FireShrinker : MonoBehaviour
 
     [Header("UI Settings")]
     public GameObject fireStoppedPanel; // assign your UI panel in inspector
+    public VoiceGuideManager voiceGuideManager;
+    public AudioSource FinalAudio;
 
     public UnityEvent onFireOut;
 
@@ -66,20 +68,27 @@ public class FireShrinker : MonoBehaviour
 
     void StopFire()
     {
-        // 🔊 Stop fire alarm
+      
         if (fireAlarm != null)
             fireAlarm.Stop();
 
-        // 💡 Disable fire light
+  
         if (fireLight != null)
             fireLight.enabled = false;
 
-        // 🖼️ Show UI panel
-        if (fireStoppedPanel != null)
-            fireStoppedPanel.SetActive(true);
+        
+        if (fireStoppedPanel != null) {
 
-        // 🔥 Destroy fire
+            fireStoppedPanel.SetActive(true);
+        FinalAudio.Play();
+        }
+        
+        
+
+  
         Destroy(gameObject);
+        
+
     }
 
    
