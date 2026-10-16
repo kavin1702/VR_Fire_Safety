@@ -29,8 +29,7 @@ public class FireServiceUI : MonoBehaviour
             infoPanel.SetActive(true);
 
             // Animate panel (pop-in effect)
-            infoPanel.transform.localScale = Vector3.zero;
-            LeanTween.scale(infoPanel, Vector3.one, 0.5f).setEaseOutBack();
+            infoPanel.transform.localScale = Vector3.one;
         }
     }
 }

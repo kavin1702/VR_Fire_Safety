@@ -562,7 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extinguisherGrab: {fileID: 4492780319478037820}
   nozzleGrab: {fileID: 6740729539440389323}
-  sprayFx: {fileID: 1791411221059332802}
+  sprayFx: {fileID: 0}
   sprayAudio: {fileID: 864936593702250586}
   pinRemoved: 0
 --- !u!1 &6343549141914373524
@@ -669,7 +669,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2797201561418996857}
-  - {fileID: 1791411221040983938}
   m_Father: {fileID: 4026864261694730051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5463809886643926480
@@ -950,8 +949,6 @@ GameObject:
   - component: {fileID: 4656511878853086643}
   - component: {fileID: 4525529107125961851}
   - component: {fileID: 6398991165580220272}
-  - component: {fileID: 43943073575214410}
-  - component: {fileID: 3203509783390243781}
   m_Layer: 0
   m_Name: HoseAnchor
   m_TagString: Untagged
@@ -1158,45 +1155,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &43943073575214410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8384400259992787352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fcc597881599646a35e7161a5504ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPoint: {fileID: 8733896571849432329}
-  midPoint: {fileID: 5575009124685601116}
-  endPoint: {fileID: 3542974618743457465}
-  linePoints: 16
-  stiffness: 341.49
-  damping: 15
-  ropeLength: 1
-  ropeWidth: 0.12
-  midPointWeight: 1
-  midPointPosition: 0.5
---- !u!114 &3203509783390243781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8384400259992787352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5702366e18c47ef469ba2903e5846489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OverallDivision: 6
-  ropeWidth: 0.01
-  radialDivision: 11
-  material: {fileID: 2100000, guid: c4e21705a2125e64fa0712cd86d30dfe, type: 2}
-  tilingPerMeter: 1
 --- !u!1 &8695797574744553918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,74 +1449,3 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!1001 &6899395989421394462
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3542974618743457465}
-    m_Modifications:
-    - target: {fileID: 5144178514852575676, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_Name
-      value: CFXR Smoke Source 3D Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0044
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0092
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.011
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071079
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.70710576
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144178514866757852, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
---- !u!4 &1791411221040983938 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5144178514852603292, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-  m_PrefabInstance: {fileID: 6899395989421394462}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1791411221059332802 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5144178514866757852, guid: 99cd7421fb2471f47a6fa3041e819ee4, type: 3}
-  m_PrefabInstance: {fileID: 6899395989421394462}
-  m_PrefabAsset: {fileID: 0}
